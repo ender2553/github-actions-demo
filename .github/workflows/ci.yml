@@ -2,9 +2,11 @@ name: Simple Python CI
 
 on:
 push:
-branches: ["main"]
+branches:
+- main
 pull_request:
-branches: ["main"]
+branches:
+- main
 
 jobs:
 test:
@@ -26,5 +28,5 @@ steps:
       pip install pytest
 
   - name: Run test suite
-    run: pytest
+    run: python -m pytest
 
